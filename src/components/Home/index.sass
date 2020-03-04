@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:500&display=swap');
+.home
+    width: 100%
+    height: 100vh
+    .home-img
+        z-index: -1
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .home-mid
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-family: 'Chakra Petch', sans-serif
+        .home-title
+            font-size: 5.5em
+            font-weight: bold
+        .home-sub
+            width: 80%
+            font-size: 2em
+        .home-linkgroup
+            display: flex
+            .home-linkgroup-button
+                color: white
+                transition: color 1s
+                &:hover
+                    color: #11abb0
+    .home-next
+        position: relative
+        top: -15vh
