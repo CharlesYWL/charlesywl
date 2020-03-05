@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { Button, AppBar } from "@material-ui/core";
+import { Button, Tooltip } from "@material-ui/core";
+import resume from "../src/Weili-Yin-Resume.pdf";
+import GetAppIcon from "@material-ui/icons/GetApp";
+
 import "./index.sass";
 
 function Navbar() {
@@ -8,7 +11,11 @@ function Navbar() {
       <Button className="nav-bar-part">Home</Button>
       <Button className="nav-bar-part">About</Button>
       <Button className="nav-bar-part">Works</Button>
-      <Button className="nav-bar-part">Resuem</Button>
+      <a href={resume} download>
+        <Button className="nav-bar-part" endIcon={<GetAppIcon />}>
+          Resume
+        </Button>
+      </a>
     </div>
   );
 }

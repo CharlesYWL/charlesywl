@@ -1,6 +1,7 @@
 {
   "name": "charlesywl",
-  "version": "0.1.0",
+  "homepage": "https://charlesywl.com",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.5",
