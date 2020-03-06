@@ -21,9 +21,17 @@
         .home-title
             font-size: 5.5em
             font-weight: bold
+            @media screen and ( max-width: 760px )
+                font-size: 3.5em
+            @media screen and ( max-width: 500px )
+                font-size: 2.5em
         .home-sub
             width: 80%
             font-size: 2em
+            @media screen and ( max-width: 760px )
+                font-size: 1.6em
+            @media screen and ( max-width: 500px )
+                font-size: 1.3em
         .home-linkgroup
             display: flex
             .home-linkgroup-button
@@ -34,3 +42,9 @@
     .home-next
         position: relative
         top: -15vh
+        .home-next-icon
+            font-size: 2em
+            @media screen and ( max-width: 760px )
+                font-size: 1em
+            @media screen and ( max-width: 500px )
+                font-size: 0em

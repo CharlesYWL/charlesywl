@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import "./index.sass";
 import { IconButton, Link, Icon } from "@material-ui/core";
 import homeimg from "../img/homeimg.jpg";
@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     let resumeData = this.props.resumeData.home;
     return (
-      <div className="home">
+      <div className="home" id="home">
         <img className="home-img" src={homeimg} />
         <div className="home-mid">
           <div className="home-title">{resumeData.bigTitle}</div>
@@ -37,9 +37,15 @@ class Home extends Component {
           </div>
         </div>
         <div className="home-next">
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              let anchorElement = document.getElementById("about");
+              anchorElement.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <ExpandMoreOutlinedIcon
-              style={{ color: "white", fontSize: "2em" }}
+              className="home-next-icon"
+              style={{ color: "white" }}
             />
           </IconButton>
         </div>

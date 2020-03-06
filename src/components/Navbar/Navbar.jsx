@@ -8,10 +8,19 @@ import "./index.sass";
 function Navbar() {
   return (
     <div className="nav-bar">
-      <Button className="nav-bar-part">Home</Button>
+      <Button
+        className="nav-bar-part"
+        onClick={() => {
+          document
+            .getElementById("home")
+            .scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Home
+      </Button>
       <Button className="nav-bar-part">About</Button>
       <Button className="nav-bar-part">Works</Button>
-      <a href={resume} download>
+      <a href={resume} download style={{ textDecoration: "none" }}>
         <Button className="nav-bar-part" endIcon={<GetAppIcon />}>
           Resume
         </Button>
