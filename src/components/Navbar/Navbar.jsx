@@ -18,8 +18,26 @@ function Navbar() {
       >
         Home
       </Button>
-      <Button className="nav-bar-part">About</Button>
-      <Button className="nav-bar-part">Works</Button>
+      <Button
+        className="nav-bar-part"
+        onClick={() => {
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        About
+      </Button>
+      <Button
+        className="nav-bar-part"
+        onClick={() => {
+          document
+            .getElementById("work")
+            .scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Works
+      </Button>
       <a href={resume} download style={{ textDecoration: "none" }}>
         <Button className="nav-bar-part" endIcon={<GetAppIcon />}>
           Resume

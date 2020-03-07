@@ -1,3 +1,5 @@
+import ASLogo from "./components/img/AccessSecureLogo.png";
+import HMLogo from "./components/img/HalfMileLogo.png";
 let resumeData = {
   home: {
     bigTitle: "I am Weili Yin",
@@ -18,8 +20,14 @@ let resumeData = {
   },
   works: [
     {
-      img: "xxxx",
-      link: "link here"
+      name: "Log Secure",
+      imgid: "../img/AccessSecureLogo.png",
+      link: "https://logsecure.io"
+    },
+    {
+      name: "Half Mile(Demo)",
+      imgid: "../img/HalfMileLogo.png",
+      link: "https://halfmile.io"
     }
   ]
 };
