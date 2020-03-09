@@ -1,17 +1,22 @@
 import React, { Component, useRef } from "react";
 import "./index.sass";
-import { IconButton, Link, Icon } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
+import { Skeleton } from "@material-ui/lab";
 import homeimg from "../img/homeimg.jpg";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
 class Home extends Component {
   render() {
     let resumeData = this.props.resumeData.home;
     return (
       <div className="home" id="home">
-        <img className="home-img" src={homeimg} />
+        {homeimg ? (
+          <img className="home-img" src={homeimg} />
+        ) : (
+          <Skeleton variant="rect" width={"100vw"} height={"100vh"} />
+        )}
+
         <div className="home-mid">
           <div className="home-title">{resumeData.bigTitle}</div>
           <div className="home-sub">{resumeData.discribtion}</div>
