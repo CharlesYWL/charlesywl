@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Tooltip } from "@material-ui/core";
-import resume from "../src/Weili-Yin-Resume.pdf";
+// import resume from "";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
 import "./index.sass";
@@ -9,9 +9,9 @@ class Navbar extends Component {
   state = {
     height: window.innerHeight,
     opacity: 1,
-    backgroundColor: "rgba(74,74,74,0)"
+    backgroundColor: "rgba(74,74,74,0)",
   };
-  listenScrollEvent = e => {
+  listenScrollEvent = (e) => {
     if (window.scrollY < this.state.height / 4) {
       let opc = 1 - 4 * (window.scrollY / this.state.height);
       this.setState({ opacity: opc });
@@ -26,7 +26,7 @@ class Navbar extends Component {
     const myWork = document.getElementById("about");
     if (myWork.getBoundingClientRect().top <= 0) {
       this.setState({
-        backgroundColor: "rgba(74,74,74,1)"
+        backgroundColor: "rgba(74,74,74,1)",
       });
     } else {
       this.setState({ backgroundColor: "rgba(74,74,74,0)" });
@@ -46,7 +46,7 @@ class Navbar extends Component {
         className="nav-bar"
         style={{
           opacity: this.state.opacity,
-          backgroundColor: this.state.backgroundColor
+          backgroundColor: this.state.backgroundColor,
         }}
       >
         <Button
@@ -79,7 +79,11 @@ class Navbar extends Component {
         >
           Works
         </Button>
-        <a href={resume} download style={{ textDecoration: "none" }}>
+        <a
+          href="https://charlesywl.github.io/VegiExchange/charlesywl/Weili-Yin-Resume.docx"
+          download="Weili-Yin-Resume"
+          style={{ textDecoration: "none" }}
+        >
           <Button className="nav-bar-part" endIcon={<GetAppIcon />}>
             Resume
           </Button>

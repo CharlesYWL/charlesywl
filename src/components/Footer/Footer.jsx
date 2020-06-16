@@ -20,7 +20,7 @@ class Footer extends Component {
             </Avatar>
           </IconButton>
         </div>
-        <div className="footer-version">Version 0.0.3</div>
+        <div className="footer-version">Version 0.1.1</div>
       </div>
     );
   }

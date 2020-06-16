@@ -8,7 +8,7 @@ import {
   CardMedia,
   CardContent,
   Typography,
-  Divider
+  Divider,
 } from "@material-ui/core";
 class Work extends Component {
   render() {
@@ -44,6 +44,14 @@ class Work extends Component {
                     Middleware and service for access control, logging,
                     anti-spamming, black/white list, ...
                   </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                    className="skill-title"
+                  >
+                    React JS CSS
+                  </Typography>
                 </CardContent>
               </CardActionArea>
             </a>
@@ -74,6 +82,14 @@ class Work extends Component {
                   >
                     An All-In-One travel planner including route planning,
                     hotel/flight reservation and auto-generated checklist
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                    className="skill-title"
+                  >
+                    React REST'API Firebase
                   </Typography>
                 </CardContent>
               </CardActionArea>
