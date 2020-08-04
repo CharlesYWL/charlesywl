@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./index.sass";
-import ACLogo from "../img/AccessSecureLogo.png";
-import HMLogo from "../img/HalfMileLogo.png";
 import {
   Card,
   CardActionArea,
@@ -17,84 +15,48 @@ class Work extends Component {
       <div className="work-wrapper" id="work">
         <div className="work-title">MY WORKS</div>
         <div className="work">
-          <Card className="work-card">
-            <a
-              href={resumeData[0].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <CardActionArea className="work-card-container">
-                <img className="img" src={ACLogo} />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    className="title"
-                  >
-                    Access Secure
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    className="title"
-                  >
-                    Middleware and service for access control, logging,
-                    anti-spamming, black/white list, ...
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    className="skill-title"
-                  >
-                    React JS CSS
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </a>
-          </Card>
-          <Card className="work-card">
-            <a
-              href={resumeData[1].link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <CardActionArea className="work-card-container">
-                <img className="img" src={HMLogo} />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    className="title"
-                  >
-                    Half Mile(Demo)
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    className="title"
-                  >
-                    An All-In-One travel planner including route planning,
-                    hotel/flight reservation and auto-generated checklist
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    className="skill-title"
-                  >
-                    React REST'API Firebase
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </a>
-          </Card>
+          {resumeData.map((value, index) => {
+            return (
+              <Card className="work-card">
+                <a
+                  href={value.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <CardActionArea className="work-card-container">
+                    <img className="img" src={value.imgid} />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                        className="title"
+                      >
+                        {value.name}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        className="title"
+                      >
+                        {value.info}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                        className="skill-title"
+                      >
+                        {value.tech}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </a>
+              </Card>
+            );
+          })}
         </div>
       </div>
     );
