@@ -1,3 +1,5 @@
+[![Build Status](https://charlesyin.visualstudio.com/CharlesYWL/_apis/build/status/CharlesYWL.charlesywl?branchName=master)](https://charlesyin.visualstudio.com/CharlesYWL/_build/latest?definitionId=6&branchName=master)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
