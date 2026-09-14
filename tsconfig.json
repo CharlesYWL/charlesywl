@@ -33,8 +33,9 @@
       ],
       "@media/*": [
         "./src/media/*"
-      ],
-    }
+      ]
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
